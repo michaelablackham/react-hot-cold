@@ -9,4 +9,9 @@ describe('<GuessSection/>', () => {
     shallow(<GuessSection title="foo" />);
   });
 
+  it('Renders feedback', () => {
+    const feedback = "stuff and things";
+    const wrapper = shallow(<GuessSection feedback={feedback} />);
+    expect(wrapper.contains(feedback)).toEqual(true);
+  });
 });
